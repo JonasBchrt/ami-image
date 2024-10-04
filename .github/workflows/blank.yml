@@ -33,7 +33,7 @@ jobs:
           # 'username' stays activated. 'username' must be set for this to work. Please be 
           # aware of the implied security risk of defining a default username and password 
           # for your devices.
-          disable-first-boot-user-rename: 0
+          disable-first-boot-user-rename: 1
 
           # Additional options to include in PIGEN_DOCKER_OPTS
           docker-opts: ''
@@ -44,7 +44,7 @@ jobs:
           enable-noobs: false
 
           # Enable SSH access to Pi.
-          enable-ssh: 0
+          enable-ssh: 1
 
           # If this feature is enabled, the action will configure pi-gen to not export any 
           # stage as image but the last one defined in property 'stage-list'. This is 
@@ -73,7 +73,7 @@ jobs:
           hostname: raspberrypi
 
           # Final image name.
-          image-name: ''
+          image-name: ami-image
 
           # Default keyboard keymap.
           keyboard-keymap: gb
@@ -85,7 +85,7 @@ jobs:
           locale: en_GB.UTF-8
 
           # Password of the intial user account, locked if empty.
-          password: test
+          password: raspberry
 
           # Path where selected pi-gen ref will be checked out to. If the path does not yet 
           # exist, it will be created (including its parents).
@@ -93,7 +93,7 @@ jobs:
 
           # The release name to use in `/etc/issue.txt`. The default should only be used for 
           # official Raspberry Pi builds.
-          pi-gen-release: Raspberry Pi reference
+          pi-gen-release: AMI OS
 
           # GitHub repository to fetch pi-gen from, must be a fork from RPi-Distro/pi-gen.
           pi-gen-repository: RPi-Distro/pi-gen
@@ -128,7 +128,7 @@ jobs:
           # images in stage2 (lite), stage4 and stage5. You probably want to hook in custom 
           # stages before one of the exported stages. Otherwise, the action will make sure 
           # any custom stage will include an image export directive.
-          stage-list: stage0 stage1 stage2
+          stage-list: stage0 stage1 stage2 stage3 stage4 ami-stage
 
           # System timezone.
           timezone: Europe/London
@@ -140,7 +140,7 @@ jobs:
           verbose-output: false
 
           # Wifi country code of default network to connect to.
-          wpa-country: ''
+          wpa-country: gb
 
           # SSID of a default wifi network to connect to.
           wpa-essid: ''
