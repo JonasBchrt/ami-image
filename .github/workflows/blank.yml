@@ -24,6 +24,7 @@ jobs:
           cat > ami-stage/ami/00-run-chroot.sh <<-EOF
           #!/bin/bash
           apt install -y git
+          cd /home/pi
           git clone -b jonas-dev https://github.com/AMI-system/pi_inferences.git
           cd pi_inferences
           chmod +x install.sh
