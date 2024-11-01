@@ -56,4 +56,8 @@ If using a self-hosted runner with sufficient memory, you can build an operating
 
     ↓
 
-6. Flash OS image on SD card
+6. Decompress OS image
+
+    ↓
+
+7. Flash OS image on SD card
