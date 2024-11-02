@@ -35,7 +35,7 @@ Run the action either on a Github hosted runner by choosing `runs-on: ubuntu-lat
 However, the memory limit of the free Github hosted runner does not allow to build an OS image with a graphical user interface and, hence, the stage list must be set to `stage-list: 'stage0 stage1 stage2 ami-stage'`.
 If using a self-hosted runner with sufficient memory, you can build an operating system with graphical user interface by setting the stage list to `stage-list: 'stage0 stage1 stage2 stage3 stage4 ami-stage'`.
 
-## Proposed AMI OS development workflow:
+## Proposed AMI OS development workflow
 
 1. Clone Github repository
 

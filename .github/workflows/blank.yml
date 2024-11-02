@@ -46,7 +46,7 @@ jobs:
         id: build
         with:
           # Compression to apply on final image (either "none", "zip", "xz" or "gz").
-          # compression: zip
+          compression: none
 
           # Compression level to be used. From 0 to 9 (refer to the tool man page for more 
           # information on this. Usually 0 is no compression but very fast, up to 9 with the 
