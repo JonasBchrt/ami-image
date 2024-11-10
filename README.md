@@ -35,6 +35,8 @@ Run the action either on a Github hosted runner by choosing `runs-on: ubuntu-lat
 However, the memory limit of the free Github hosted runner does not allow to build an OS image with a graphical user interface and, hence, the stage list must be set to `stage-list: 'stage0 stage1 stage2 ami-stage'`.
 If using a self-hosted runner with sufficient memory, you can build an operating system with graphical user interface by setting the stage list to `stage-list: 'stage0 stage1 stage2 stage3 stage4 ami-stage'`.
 
+When using a self-hosted runner your probably need to install docker, set the environment variable `RUNNER_ALLOW_RUNASROOT` to `"1"` (`export RUNNER_ALLOW_RUNASROOT="1"`), and (after configuration) run the runner with `sudo -E bash -c './run.sh'` (to pass the environment variable on).
+
 ## Proposed AMI OS development workflow
 
 1. Clone Github repository
