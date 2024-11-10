@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   pi-gen-upload-image:
-    runs-on: ubuntu-latest  # self-hosted
+    runs-on: self-hosted  # ubuntu-latest
     steps:
       - run: |
           mkdir -p ami-stage/ami &&
@@ -152,7 +152,7 @@ jobs:
           # images in stage2 (lite), stage4 and stage5. You probably want to hook in custom 
           # stages before one of the exported stages. Otherwise, the action will make sure 
           # any custom stage will include an image export directive.
-          stage-list: 'stage0 stage1 stage2 ./ami-stage'  # stage3 stage4'
+          stage-list: 'stage0 stage1 stage2  stage3 stage4 ./ami-stage'  #
 
           # System timezone.
           # timezone: Europe/London
