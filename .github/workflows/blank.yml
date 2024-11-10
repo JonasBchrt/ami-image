@@ -18,6 +18,12 @@ jobs:
   pi-gen-upload-image:
     runs-on: self-hosted  # ubuntu-latest
     steps:
+      - name: 'Cleanup build folder'
+        run: |
+          ls -la ./
+          rm -rf ./* || true
+          rm -rf ./.??* || true
+          ls -la ./
       - run: |
           mkdir -p ami-stage/ami &&
           {
