@@ -14,6 +14,8 @@ In addition to the default Raspberry Pi OS stages and configuration, it does the
 
 The action automatically uses the third-party Github actions [pi-gen-action](https://github.com/usimd/pi-gen-action) and [upload-artifact](https://github.com/actions/upload-artifact).
 
+*Note:* As of now, you still need to copy any models for on-board classification manually. See the last step in the readme in the `pi_inferences` repository for details.
+
 ## ami-stage
 
 The custom AMI stage does the following (cf. [blank.yml](.github/workflows/blank.yml)):
